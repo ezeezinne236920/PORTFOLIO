@@ -1,0 +1,123 @@
+:root {
+  --primarycolor: rgb(80, 8, 8);
+  --navbacground: rgba(183, 106, 160, 0.738);
+  --lightgrey: rgba(181, 177, 177, 0.935);
+  --transparentlightgrey: rgba(181, 177, 177, 0.735);
+}
+/* section */
+section {
+  min-width: 100vw;
+  min-height: 90vh;
+  background: var(--primarycolor);
+  color: var(--navbacground);
+}
+
+.longLine {
+  border: none;
+  /* width: 2px; */
+  background: var(--navbacground);
+  font-weight: bolder;
+  height: 19.9rem;
+}
+.fixedPosition,
+.fixedPosition2 {
+  width: 2px;
+  position: fixed;
+  top: 330px;
+  background: var(--primarycolor);
+  font-size: 1.6rem;
+}
+
+.fixedPosition1 {
+  left: 1rem;
+}
+.fixedPosition2 {
+  transform: rotate(90deg);
+  right: 1rem;
+  font-size: 1rem;
+}
+.positioncontent {
+  color: red;
+  z-index: 4;
+}
+.blurontoggle {
+  z-index: 1;
+}
+
+.sectionInfo {
+  margin-left: 7rem;
+  padding-top: 9.8rem;
+}
+.sectionInfo .boldfont {
+  color: var(--transparentlightgrey);
+}
+.sectionInfo h1 {
+  font-size: 3.7rem;
+  color: var(--lightgrey);
+}
+.sectionInfo p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: var(--transparentlightgrey);
+}
+.checkmyproject {
+  margin-top: 4rem;
+  width: 10rem;
+  height: 3rem;
+  border: 1px solid var(--navbacground);
+  border-radius: 4px;
+  text-transform: capitalize;
+  font-weight: bold;
+  background: var(--primarycolor);
+  animation:projectswing 0.5s  linear infinite alternate ;
+}
+.checkmyproject a {
+  color: var(--navbacground);
+}
+/* section ends */
+@media (max-width: 800px) {
+  .sectionInfo {
+    margin-right: 1rem;
+  }
+  .fixedPosition2 {
+    display: none;
+  }
+  .sectionInfo h1 {
+    font-size: 2rem;
+  }
+  .sectionInfo {
+    padding-top: 4.8rem;
+  }
+}
+@media (max-width: 400px) {
+  .sectionInfo {
+    margin-left: 4rem;
+  }
+  .sectionInfo h1 {
+    font-size: 1.5rem;
+  }
+  .sectionInfo h3 {
+    font-size: 12px;
+  }
+  .fixedPosition1 {
+    font-size: 12px;
+  }
+  .sectionInfo p {
+    font-size: 12px;
+  }
+}
+@keyframes projectswing {
+  0%{    
+  transform:rotate(-45deg);
+  }
+  50%{
+    
+  transform:rotate(0deg);
+  }
+  100%{
+    
+  transform:rotate(-4deg);
+  }
+}
+
