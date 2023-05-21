@@ -1,8 +1,10 @@
 :root {
-  --primarycolor: rgb(80, 8, 8);
-  --navbacground: rgba(183, 106, 160, 0.738);
-  --lightgrey: rgba(181, 177, 177, 0.935);
-  --transparentlightgrey: rgba(181, 177, 177, 0.735);
+  --primarycolor: #47312b;
+  ----navbacground: rgba(181, 177, 177, 0.935);
+  --transparentlightgrey: rgba(181, 177, 177, 0.935);
+  --whitecolor: #f2f2f2;
+  --boxshadow: 10 5 5 rgba(181, 177, 177);
+  --border: #0000;
 }
 /* section */
 section {
@@ -10,6 +12,9 @@ section {
   min-height: 90vh;
   background: var(--primarycolor);
   color: var(--navbacground);
+}
+.infofirstchild {
+  transform: translateY(2.6rem);
 }
 
 .longLine {
@@ -45,32 +50,32 @@ section {
 }
 
 .sectionInfo {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
   margin-left: 7rem;
   padding-top: 9.8rem;
-}
-.sectionInfo .boldfont {
   color: var(--transparentlightgrey);
 }
+
 .sectionInfo h1 {
   font-size: 3.7rem;
-  color: var(--lightgrey);
+  color: var(--transparentlightgrey);
 }
 .sectionInfo p {
   font-size: 1.2rem;
-  margin-top: 1rem;
   font-weight: bold;
   color: var(--transparentlightgrey);
 }
 .checkmyproject {
-  margin-top: 4rem;
+  margin-top: 2rem;
   width: 10rem;
   height: 3rem;
-  border: 1px solid var(--navbacground);
+  border: 1px solid var();
   border-radius: 4px;
   text-transform: capitalize;
   font-weight: bold;
-  background: var(--primarycolor);
-  animation:projectswing 0.5s  linear infinite alternate ;
+  background: var(--border);
+  /* animation: projectswing 0.5s linear infinite alternate; */
 }
 .checkmyproject a {
   color: var(--navbacground);
@@ -90,34 +95,34 @@ section {
     padding-top: 4.8rem;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   .sectionInfo {
     margin-left: 4rem;
   }
   .sectionInfo h1 {
-    font-size: 1.5rem;
+    font-size: 18px;
   }
   .sectionInfo h3 {
-    font-size: 12px;
+    font-size: 14px;
+    transform: translateY(-0.1px);
   }
   .fixedPosition1 {
     font-size: 12px;
   }
   .sectionInfo p {
     font-size: 12px;
+    transform: translateY(-3px);
+    transform: translateX(-1rem);
   }
 }
 @keyframes projectswing {
-  0%{    
-  transform:rotate(-45deg);
+  0% {
+    transform: rotate(-45deg);
   }
-  50%{
-    
-  transform:rotate(0deg);
+  50% {
+    transform: rotate(0deg);
   }
-  100%{
-    
-  transform:rotate(-4deg);
+  100% {
+    transform: rotate(-4deg);
   }
 }
-

@@ -1,10 +1,10 @@
 :root {
-  --primarycolor: rgb(80, 8, 8);
-  --navbacground: rgba(183, 106, 160, 0.738);
-  --lightgrey: rgba(181, 177, 177, 0.935);
-  --transparentlightgrey: rgba(181, 177, 177, 0.735);
+  --primarycolor: #47312b;
+  --navbacground: rgba(181, 177, 177, 0.935);
+  --transparentlightgrey: rgba(181, 177, 177, 0.935);
   --whitecolor: #f2f2f2;
-  --boxshadow: 10 5 5 rgba(181, 177, 177, 0.735);
+  --black: #0000;
+  --boxshadow: 3px 3px 6px 1px rgba(181, 177, 177, 0.935);
 }
 img {
   width: 100%;
@@ -13,6 +13,9 @@ img {
   margin-left: 7rem;
   padding-top: 7rem;
   min-height: 100vh;
+}
+.aboutme h3 {
+  box-shadow: var(--boxshadow);
 }
 .horizontalrule {
   display: inline-block;
@@ -24,7 +27,6 @@ img {
 .aboutme span {
   margin-left: 2rem;
   font-size: 2rem;
-  color: var(--whitecolor);
 }
 p {
   font-size: 1.2rem;
@@ -46,11 +48,16 @@ p {
   margin-top: 2rem;
   margin-left: 1rem;
 }
+.list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
 .list li {
   font-weight: bold;
   text-transform: uppercase;
-  color: var(--lightgrey);
-  list-style: square;
+  color: var(----navbacground);
+  list-style: none;
+  font-size: 4rem;
 }
 .list li:last-child {
   margin-bottom: 1rem;
@@ -60,6 +67,10 @@ p {
   grid-template-columns: 2fr 1fr;
   grid-gap: 8rem;
 }
+.linebreak {
+  margin-bottom: 1rem;
+}
+
 @media (max-width: 1110px) {
   .grid {
     grid-template-columns: repeat(1fr);
@@ -120,7 +131,9 @@ p {
   .one {
     margin-left: -1rem;
   }
-  .aboutme h3{margin-top: -5rem;}
+  .aboutme h3 {
+    margin-top: -5rem;
+  }
   p {
     font-size: 14px;
   }
@@ -137,6 +150,33 @@ p {
     margin-top: 2rem;
     animation: bounce 1s infinite 5s;
     margin-left: 1rem;
+  }
+}
+@media (max-width: 400px) {
+  .aboutme {
+    margin-left: 3.8rem;
+    padding-top: 7rem;
+    min-height: 100vh;
+  }
+  .aboutme span {
+    font-size: 1.5rem;
+    transform: translateY(-5rem);
+  }
+  .list li {
+    font-size: 2rem;
+    margin-left: 1rem;
+  }
+  .one {
+    margin-left: 2px;
+    transform: translateY(5px);
+  }
+  .grid p {
+    font-size: 12px;
+    transform: translateX(-1rem);
+  }
+  p {
+    font-size: 12px;
+    transform: translateX(-1rem);
   }
 }
 @keyframes bounce {

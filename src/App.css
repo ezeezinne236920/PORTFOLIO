@@ -1,7 +1,9 @@
 :root {
-  --primarycolor: rgb(80, 8, 8);
-  --navbacground: rgba(183, 106, 160, 0.738);
-  --lightgrey: rgb(181, 177, 177);
+  --primarycolor: #47312b;
+  ----navbacground: rgba(181, 177, 177, 0.935);
+  --transparentlightgrey: rgba(181, 177, 177, 0.935);
+  --whitecolor: #f2f2f2;
+  --boxshadow: 10 5 5 rgba(181, 177, 177, 0.735);
 }
 * {
   padding: 0;
@@ -10,8 +12,8 @@
   list-style: none;
 }
 a {
-  color: lightgray;
   text-decoration: none;
+  color:black;
 }
 .navcontainer {
   max-width: 1366px;
@@ -29,7 +31,7 @@ nav {
   bottom: 0;
   left: 10px;
   min-height: 10vh;
-  background: rgba(183, 106, 160, 0.738);
+  background: var(----navbacground);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -63,7 +65,7 @@ nav button:hover {
   transition: all 0.4s ease;
   display: block;
   margin: 0 3rem;
-  color: rgb(80, 8, 8);
+   color: var(--primarycolor);
   font-weight: bolder;
 }
 .nav ul a:hover {

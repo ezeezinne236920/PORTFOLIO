@@ -23,16 +23,17 @@ const Section = ({ social }) => {
         <hr className='longLine' />
       </div>
       <div className='sectionInfo'>
-        <h3>Hello, my name is </h3>
+        <h3 className='infofirstchild'>Hello, my name is </h3>
+        {/* <p>my name is,</p> */}
         <h1 className='boldfont'>Eze Ezinne Leticia</h1>
         <h1>I am a web developer</h1>
         <p>
           I am a software engineer specializing in building (and occasionally
-          designing) exceptional digital experiences. Currently, I am available
-          for any job involving building things for the web.
+          designing) <br /> exceptional digital experiences. Currently, I am
+          available for any job <br /> involving building things for the web.
           <a href='/cv'>click </a>to see my cv
         </p>
-        <div  >
+        <div>
           <button className='checkmyproject'>
             <a href='#'>See my projects!</a>
           </button>
